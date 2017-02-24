@@ -18,7 +18,7 @@ function getNewQuote(){
       quoteDisplay.innerHTML = '‟' + quote.quote + '”<br><br>-' + quote.author;
       twitterLink.setAttribute("href",
       "https://twitter.com/intent/tweet?hashtags=programmerquotes&related=freecodecamp&text=" +
-      '"' + quote.quote + '" -' + quote.author);
+      encodeURIComponent('"' + quote.quote + '" -' + quote.author));
     }
   }
 }
